@@ -17,6 +17,14 @@ python+flask+dplayer
 
    本来以为国内没人用谷歌云盘，没想到这么多，放一个谷歌云盘链接 [https://drive.google.com/file/d/1l3IIMSUoRCrFSQxIxkJ3Jl0YgaOZgi69/view?usp=sharing](https://drive.google.com/file/d/1l3IIMSUoRCrFSQxIxkJ3Jl0YgaOZgi69/view?usp=sharing)
 
+   **容器化部署方案：**
+   ```
+   mkdir mygo && cd mygo
+   mkdir vedio
+   docker pull tscci/mygoflaskproject:amd64
+   docker-compose up -d
+   ```
+
    常见问题：
    - 视频有声音黑屏：下载或更新至最新的谷歌浏览器即可，压缩包里的视频是v265格式，目前只有新的浏览器支持，谷歌官网是 https://www.google.cn/chrome/index.html ，不要进到钓鱼网站了
    - 视频不加载+评论区不加载：原因是火绒的拦截策略，临时关掉火绒或者b站私聊，改一下代码即可
@@ -24,6 +32,7 @@ python+flask+dplayer
    - 感觉视频不够清楚：mygoFlaskProject/video/文件夹下放的是所有视频，替换为你的高清mp4资源即可
    - 运行后图片和视频加载慢：不要把文件夹放在U盘或其他移动存储设备中直接运行，会导致数据传输受制于接口速度，如果还是卡那可能你需要换个新电脑啦:grin:
    - 想在手机或pad上运行：没问题，但是移动端的页面没有适配，操作方法是手机和电脑连接同一wifi(在同一个局域网内)，电脑打开程序后，手机浏览器（最好也是谷歌）访问命令行中的第二个地址，注意在播放视频时最好使用横屏模式。
+   - 可选择拉取异构镜像tscci/mygoflaskproject:arm64，容器读取../mygo/vedio文件夹下的mp4文件。
 
 3. 开发环境启动
 
