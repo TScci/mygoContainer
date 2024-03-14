@@ -8,6 +8,8 @@ B站视频地址：https://www.bilibili.com/video/BV1Ww411C73f
 
 python+flask+dplayer
 
+* 本分支添加 [容器化部署](容器化部署)
+
 ## mygo,启动!!!!!
 1. 下载、解压、直接启动!!!!!
    
